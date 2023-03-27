@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Avståndet</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Beräkna avståndet mellan två punkter</h1>
+  <h3>
+    Ni ska kalkulera distance mellan två punkter med hjälp av 
+    <a href="https://www.google.com/maps/">Google maps</a>. 
+  </h3>
+  <h4>
+    <br>1. Ni ska ändra formeln för att beräkna avståndet mellan två punkter (filnamn: "script.js").
+    <br>2. Gå sedan in på Google Maps och hitta två punkter, till exempel skolan och hemmet.
+    <br>3. Högerklicka på punkten och ta reda på koordinaterna i decimal form.
+    <br>Observera att longitudvärden anses som x-koordinater, medan latitudvärdena är y-koordinater. Till exempel: 
+    <br> LBS: 59.34539322223752, 18.02301185666176 Karolinska: 59.349128254845034, 18.030383628981316
+    <br>59... är x-koordinaten
+    <br>18... är y-koordinaten
+    <br> avstånd ca 530 meter
+    <br>4. För att omvandla resultatet till meter kan ni multiplicera det med jordens genomsnittliga radie i meter, vilket är cirka 6371000 meter.
+    <br>5. Sätt in siffrorna i formuläret och beräkna avståndet.
+  </h4>
+  <h5>
+    Observera att avståndsformeln med enbart latitud och longitud 
+    är endast korrekt för plana ytor som kartor 
+    (kartesiskt koordinatsystem). Jorden är dock inte platt, 
+    utan en sfär. För att exakt beräkna avstånd på 
+    jordens yta måste du använda en mer komplex formel som 
+    tar hänsyn till jordens krökning, till exempel 
+    Haversine-formeln. Dessutom är höjden (höjd över havet) 
+    inte nödvändig för att beräkna avståndet mellan två punkter 
+    på jordens yta. 
+  </h5>
+  <form>
+    <label for="x1">Enter the x-coordinate of Point 1:</label>
+    <input type="float" id="x1" required>
+    <br>
+    <label for="y1">Enter the y-coordinate of Point 1:</label>
+    <input type="float" id="y1" required>
+    <br>
+    <label for="x2">Enter the x-coordinate of Point 2:</label>
+    <input type="float" id="x2" required>
+    <br>
+    <label for="y2">Enter the y-coordinate of Point 2:</label>
+    <input type="float" id="y2" required>
+    <br>
+    <button type="submit">Calculate Distance</button>
+  </form>
+  <div id="result"></div>
+  <script src="script.js"></script>
+</body>
+</html>
